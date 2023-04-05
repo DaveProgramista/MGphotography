@@ -20,9 +20,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 	background-color: $main-color;
+}
+.sticky-body{
     overflow: hidden;
 }
-
 //**********************
 // navigation
 //**********************
@@ -128,7 +129,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	padding: 2em;
-	height: 75vh;
+	height: 65vh;
 	font-family: 'Dancing Script', cursive;
 	text-align: center;
 	color: $pure-white;
@@ -150,6 +151,93 @@ body {
 	}
 }
 
+//**********************
+// about
+//**********************
+.about{
+    padding: 2em;
+    margin-top: 5em;
+
+    &__box{
+        position: relative;
+    }
+
+    &__heading {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        padding: 1em;
+        font-size: 2.8rem;
+        color: $pure-white;
+        background-color: $darker-grey;
+        border-radius: 20px;
+    }
+
+    &__text-box{
+        padding: 5em 1em 1em;
+        background-color: $grey;
+        border-radius: 20px;
+    } 
+    &__text-heading{
+        padding: 1em;
+        margin-bottom: 1em;
+        font-size: 3.6rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: $violet;
+        border-radius: 20px;
+        i{
+            font-size: 4.6rem;
+        }
+    }
+    
+    &__text{
+        font-size: 2.4rem;
+        // text-align: center;
+
+        p{
+            padding: 0.5em;
+        }
+
+        &-paragraph-second{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+
+        &-paragraph-second, &-paragraph-third{
+            color: $pure-white;
+            background-color: $darker-grey;
+            border-radius: 20px;
+            box-shadow: 2px 0 10px $darker-grey;
+        }
+
+        &-paragraph-first, &-paragraph-fourth, &-paragraph-fifth, &-paragraph-sixth{
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+
+    &__text-link{
+        color: $violet;
+        font-size: 2.4rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
+
+
+
+//**********************
+// FOOTER
+//**********************
+footer{
+    padding: 1em 1em;
+    width: 100%;
+    text-align: center;
+    background-color: $darker-grey;
+}
 
 
 @import './small';

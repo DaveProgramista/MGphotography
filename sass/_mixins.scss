@@ -4,3 +4,8 @@
     background-position: center;
     background-attachment: fixed;
 }
+
+@mixin navLinkAnimation{
+    color: $darker-grey;
+    transform: scale(1.1);
+}

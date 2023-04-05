@@ -15,6 +15,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   background-color: #FDF7FF;
+}
+
+.sticky-body {
   overflow: hidden;
 }
 
@@ -97,7 +100,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2em;
-  height: 75vh;
+  height: 65vh;
   font-family: "Dancing Script", cursive;
   text-align: center;
   color: #fffefe;
@@ -121,15 +124,86 @@ body {
   font-size: 3.8rem;
 }
 
+.about {
+  padding: 2em;
+  margin-top: 5em;
+}
+.about__box {
+  position: relative;
+}
+.about__heading {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  padding: 1em;
+  font-size: 2.8rem;
+  color: #fffefe;
+  background-color: #6e6e6e;
+  border-radius: 20px;
+}
+.about__text-box {
+  padding: 5em 1em 1em;
+  background-color: #bababa;
+  border-radius: 20px;
+}
+.about__text-heading {
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #9867c5;
+  border-radius: 20px;
+}
+.about__text-heading i {
+  font-size: 4.6rem;
+}
+.about__text {
+  font-size: 2.4rem;
+}
+.about__text p {
+  padding: 0.5em;
+}
+.about__text-paragraph-second {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.about__text-paragraph-second, .about__text-paragraph-third {
+  color: #fffefe;
+  background-color: #6e6e6e;
+  border-radius: 20px;
+  box-shadow: 2px 0 10px #6e6e6e;
+}
+.about__text-paragraph-first, .about__text-paragraph-fourth, .about__text-paragraph-fifth, .about__text-paragraph-sixth {
+  font-size: 2.8rem;
+  text-align: center;
+}
+.about__text-link {
+  color: #9867c5;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  padding: 1em 1em;
+  width: 100%;
+  text-align: center;
+  background-color: #6e6e6e;
+}
+
 @media (min-width: 768px) {
   .burger-btn {
     display: none;
   }
   .nav__desktop {
     display: block;
-    height: 15vh;
-    line-height: 15vh;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    line-height: 10vh;
     background-color: #bababa;
+    z-index: 1000;
   }
   .nav__desktop-box {
     position: absolute;
@@ -144,9 +218,21 @@ body {
     font-size: 2.6rem;
     color: #fffefe;
     text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+  }
+  .nav__desktop-link:hover {
+    color: #6e6e6e;
+    transform: scale(1.1);
+  }
+  .nav__desktop-logo {
+    position: absolute;
+    top: 1.5vh;
+    left: 5.5vh;
+    width: 7vh;
+    height: 7vh;
   }
   .header {
-    height: 85vh;
+    height: 90vh;
   }
   .header__title {
     font-size: 12rem;
